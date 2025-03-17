@@ -1,0 +1,10 @@
+cors:
+  allowedOrigins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200,https://localhost:4200}
+
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://joshidhaval627:admin@cluster0.4qaa0.mongodb.net/crud-db?retryWrites=true&w=majority&appName=Cluster0
