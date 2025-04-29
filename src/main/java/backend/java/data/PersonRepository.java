@@ -1,4 +1,4 @@
-package backend.data;
+package backend.java.data;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,14 +6,14 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import backend.domain.EntityNotFoundException;
-import backend.domain.PersonData;
-import backend.domain.entity.Person;
+import backend.java.EntityNotFoundException;
+import backend.java.PersonData;
+import backend.java.entity.Person;
 import lombok.RequiredArgsConstructor;
 
 @Component
 @RequiredArgsConstructor
-class PersonRepository implements PersonData {
+public class PersonRepository implements PersonData {
 
 	private static final String ENTITY_NOT_FOUND_UNDER_ID_MESSAGE = "entity person not found under id = %s";
 

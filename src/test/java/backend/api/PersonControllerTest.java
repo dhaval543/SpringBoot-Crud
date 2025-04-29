@@ -1,13 +1,15 @@
 package backend.api;
 
-import backend.api.payload.PersonGetResponsePayload;
-import backend.api.payload.PersonPatchRequestPayload;
-import backend.api.payload.PersonPostRequestPayload;
-import backend.domain.entity.Person;
-import backend.domain.usecase.CreatePersonUseCase;
-import backend.domain.usecase.DeletePersonUseCase;
-import backend.domain.usecase.ReadPersonUseCase;
-import backend.domain.usecase.UpdatePersonUseCase;
+import backend.java.api.ApiMapper;
+import backend.java.entity.Person;
+import backend.java.payload.PersonGetResponsePayload;
+import backend.java.payload.PersonPatchRequestPayload;
+import backend.java.payload.PersonPostRequestPayload;
+import backend.java.usecase.CreatePersonUseCase;
+import backend.java.usecase.DeletePersonUseCase;
+import backend.java.usecase.ReadPersonUseCase;
+import backend.java.usecase.UpdatePersonUseCase;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.approvaltests.Approvals;
@@ -37,7 +39,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
+import backend.java.api.*;
 @WebMvcTest(PersonController.class)
 class PersonControllerTest {
 

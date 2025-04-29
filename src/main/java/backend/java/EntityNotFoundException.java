@@ -1,4 +1,4 @@
-package backend.domain;
+package backend.java;
 
 public class EntityNotFoundException extends RuntimeException {
 

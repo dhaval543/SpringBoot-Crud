@@ -1,4 +1,4 @@
-package backend.data;
+package backend.java.data;
 
 import java.time.LocalDate;
 
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document("persons")
-class PersonMongo {
+public class PersonMongo {
 
 	@Id
 	private String id;

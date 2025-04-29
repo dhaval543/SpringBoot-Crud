@@ -8,8 +8,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
-import backend.domain.entity.Person;
-
+import backend.java.entity.Person;
+import backend.java.data.*;
 public class DataMapperTest {
 
 	final DataMapper mapper = Mappers.getMapper(DataMapper.class);

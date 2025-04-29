@@ -1,0 +1,58 @@
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: myapp
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: myapp
+#  template:
+#    metadata:
+#      labels:
+#        app: myapp
+#    spec:
+#      containers:
+#        - name: myapp
+#          image: gcr.io/firm-catalyst-456406-k3/myapp:v2
+#          ports:
+#            - containerPort: 8081
+#          env:
+#            - name: SPRING_DATA_MONGODB_URI
+#              value: mongodb://admin:password@34.45.139.57:27017/crud-db?authSource=admin
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: myapp
+          image: gcr.io/firm-catalyst-456406-k3/myapp:v2
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_DATA_MONGODB_URI
+              value: "mongodb://admin:password@mongodb-service:27017/crud-db?authSource=admin"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+  type: LoadBalancer

@@ -8,10 +8,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.mapstruct.factory.Mappers;
 
-import backend.api.payload.PersonGetResponsePayload;
-import backend.api.payload.PersonPatchRequestPayload;
-import backend.api.payload.PersonPostRequestPayload;
-import backend.domain.entity.Person;
+import backend.java.api.ApiMapper;
+import backend.java.entity.Person;
+import backend.java.payload.PersonGetResponsePayload;
+import backend.java.payload.PersonPatchRequestPayload;
+import backend.java.payload.PersonPostRequestPayload;
 
 public class ApiMapperTest {
 

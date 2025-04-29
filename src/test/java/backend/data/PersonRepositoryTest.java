@@ -1,7 +1,9 @@
 package backend.data;
 
-import backend.domain.EntityNotFoundException;
-import backend.domain.entity.Person;
+import backend.java.EntityNotFoundException;
+import backend.java.data.PersonRepository;
+import backend.java.entity.Person;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

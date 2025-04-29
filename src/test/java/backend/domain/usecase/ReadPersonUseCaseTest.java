@@ -1,8 +1,10 @@
 package backend.domain.usecase;
 
-import backend.domain.EntityNotFoundException;
-import backend.domain.PersonData;
-import backend.domain.entity.Person;
+import backend.java.EntityNotFoundException;
+import backend.java.PersonData;
+import backend.java.entity.Person;
+import backend.java.usecase.ReadPersonUseCase;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

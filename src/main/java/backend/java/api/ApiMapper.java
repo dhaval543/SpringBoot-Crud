@@ -1,15 +1,15 @@
-package backend.api;
+package backend.java.api;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import backend.api.payload.PersonGetResponsePayload;
-import backend.api.payload.PersonPatchRequestPayload;
-import backend.api.payload.PersonPostRequestPayload;
-import backend.domain.entity.Person;
+import backend.java.entity.Person;
+import backend.java.payload.PersonGetResponsePayload;
+import backend.java.payload.PersonPatchRequestPayload;
+import backend.java.payload.PersonPostRequestPayload;
 
 @Mapper(componentModel = "spring")
-interface ApiMapper {
+public interface ApiMapper {
 
 	PersonGetResponsePayload toPersonGetResponsePayload(Person p);
 

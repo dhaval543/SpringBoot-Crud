@@ -1,10 +1,10 @@
-package backend.domain.usecase;
+package backend.java.usecase;
 
 import java.util.Objects;
 
 import org.springframework.stereotype.Component;
 
-import backend.domain.PersonData;
+import backend.java.PersonData;
 import lombok.RequiredArgsConstructor;
 
 @Component

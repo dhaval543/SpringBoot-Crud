@@ -1,11 +1,11 @@
-package backend.data;
+package backend.java.data;
 
 import org.mapstruct.Mapper;
 
-import backend.domain.entity.Person;
+import backend.java.entity.Person;
 
 @Mapper(componentModel = "spring")
-interface DataMapper {
+public interface DataMapper {
 
 	PersonMongo toPersonMongo(Person p);
 

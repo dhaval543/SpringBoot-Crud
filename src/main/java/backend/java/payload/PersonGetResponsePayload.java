@@ -1,23 +1,19 @@
-package backend.domain.entity;
+package backend.java.payload;
 
 import java.time.LocalDate;
 
-import lombok.Builder;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
-@Builder(toBuilder = true)
-public class Person {
+public class PersonGetResponsePayload {
 
 	private String id;
 	private String firstName;
 	private String lastName;
+
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dateOfBirth;
-		
-	
-	
-	
 
 }

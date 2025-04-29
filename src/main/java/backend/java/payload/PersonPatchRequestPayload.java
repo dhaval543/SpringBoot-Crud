@@ -1,4 +1,4 @@
-package backend.api.payload;
+package backend.java.payload;
 
 import lombok.Data;
 

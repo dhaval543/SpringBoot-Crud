@@ -1,10 +1,26 @@
-cors:
-  allowedOrigins: ${CORS_ALLOWED_ORIGINS:http://localhost:4200,https://localhost:4200}
 
 server:
   port: ${SERVER_PORT:8081}
-
+  servlet:
+    context-path: /api
+  ssl:
+    enabled: false
+  
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://joshidhaval627:admin@cluster0.4qaa0.mongodb.net/crud-db?retryWrites=true&w=majority&appName=Cluster0
+      host: mongodb-service  
+      port: 27017
+      database: crud-db
+      username: admin
+      password: password
+      authentication-database: admin
+  
+  
+  
+
+# Optional - you can log CORS hits (useful for debugging)
+logging:
+  level:
+    org.springframework.web.cors: DEBUG
+#mongodb+srv://joshidhaval627:admin@cluster0.4qaa0.mongodb.net/crud-db?retryWrites=true&w=majority&appName=Cluster0

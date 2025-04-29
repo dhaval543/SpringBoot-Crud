@@ -1,8 +1,8 @@
-package backend.domain;
+package backend.java;
 
 import java.util.List;
 
-import backend.domain.entity.Person;
+import backend.java.entity.Person;
 
 public interface PersonData {
 
